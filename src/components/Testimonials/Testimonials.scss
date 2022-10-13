@@ -72,7 +72,7 @@
 				border-radius: 50%;
 			}
 
-			//Testimonial isnfo
+			//Testimonial info
 			&-info {
 				display: flex;
 				flex-direction: column;
@@ -114,8 +114,6 @@
 				opacity: 0.7;
 			}
 		}
-
-		//Combined testimonial styles
 
 		//Testimonial 3,5
 		&-3,
@@ -198,7 +196,7 @@
 		margin: 0;
 
 		.container {
-			grid-template-columns: repeat(2, 255px) repeat(2, 255px);
+			grid-template-columns: repeat(4, 255px);
 			grid-template-rows: 282px 266px;
 			grid-column-gap: 30px;
 			grid-row-gap: 24px;
@@ -206,11 +204,6 @@
 
 		//Each testimonial
 		.testimonial {
-			//Testimonial 1
-			&-1 {
-				grid-column: 1 / span 2;
-			}
-
 			//Testimonial 3
 			&-3 {
 				grid-column: 1;
@@ -220,13 +213,11 @@
 			//Testimonial 4
 			&-4 {
 				grid-column: 2 / span 2;
-				grid-row: 2;
 			}
 
 			//Testimonial 5
 			&-5 {
 				grid-column: 4;
-				grid-row: 1 / span 2;
 			}
 
 			//Testimonial content
