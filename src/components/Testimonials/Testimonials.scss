@@ -1,0 +1,240 @@
+@import "../../sass/base";
+@import "../../sass/layout";
+
+.testimonials {
+	margin: 71px 0;
+
+	.container {
+		display: grid;
+		grid-gap: 24px;
+	}
+
+	//Each testimonial
+	.testimonial {
+		position: relative;
+		padding: 26px 32px 32px;
+		border-radius: 8px;
+		box-shadow: 40px 60px 50px -47px #48556a3f;
+
+		//Testimonial 1
+		&-1 {
+			background-color: $violet;
+
+			.testimonial__content-title {
+				margin-bottom: 40px;
+			}
+
+			.testimonial__content-description {
+				color: $grey;
+			}
+
+			.profile {
+				border: 2px solid $lightViolet;
+			}
+		}
+
+		//Testimonial 2
+		&-2 {
+			background-color: $lightBlue;
+		}
+
+		//Testimonial 4
+		&-4 {
+			background-color: $darkBlue;
+
+			.profile {
+				border: 2px solid $violet;
+			}
+
+			.testimonial__content-title {
+				color: $grey;
+			}
+		}
+
+		//Testimonial 1 quotation pattern
+		&__pattern {
+			position: absolute;
+			top: 0;
+			right: 24px;
+			width: 104px;
+			height: 102px;
+		}
+
+		//Testimonial header
+		&__header {
+			@include flex(flex-start, center);
+			gap: 17px;
+			margin-bottom: 18px;
+
+			img {
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+			}
+
+			//Testimonial isnfo
+			&-info {
+				display: flex;
+				flex-direction: column;
+
+				.fullname,
+				.status {
+					color: $white;
+				}
+
+				.fullname {
+					line-height: 13px;
+					margin-bottom: 4px;
+				}
+
+				.status {
+					font-size: 11px;
+					line-height: 11px;
+					opacity: 0.5;
+				}
+			}
+		}
+
+		//Testimonial content
+		&__content {
+			position: relative;
+			max-width: 263px;
+			z-index: 999;
+
+			&-title,
+			&-description {
+				color: $white;
+			}
+
+			&-title {
+				margin-bottom: 16px;
+			}
+
+			&-description {
+				opacity: 0.7;
+			}
+		}
+
+		//Combined testimonial styles
+
+		//Testimonial 3,5
+		&-3,
+		&-5 {
+			background-color: $white;
+
+			.fullname,
+			.status,
+			.testimonial__content-title,
+			.testimonial__content-description {
+				color: $lightBlue;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.testimonials {
+		.container {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.testimonial {
+			//Testimonial 1
+			&-1 {
+				grid-column: 1 / span 2;
+			}
+
+			//Testimonial content
+			&__content {
+				max-width: 100%;
+			}
+
+			//Quotation pattern
+			&__pattern {
+				right: 80px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.testimonials {
+		.container {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		//Each testimonial
+		.testimonial {
+			//Testimonial 1,2
+			&-1,
+			&-2 {
+				.testimonial__content-title {
+					margin-bottom: 16px;
+				}
+			}
+
+			//Testimonial 3
+			&-3 {
+				grid-column: 2;
+			}
+
+			//Testimonial 4
+			&-4 {
+				grid-column: span 2;
+				grid-row: 2;
+			}
+
+			//Testimonial 5
+			&-5 {
+				grid-row: 1 / span 2;
+				grid-column: 3;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.testimonials {
+		margin: 0;
+
+		.container {
+			grid-template-columns: repeat(2, 255px) repeat(2, 255px);
+			grid-template-rows: 282px 266px;
+			grid-column-gap: 30px;
+			grid-row-gap: 24px;
+		}
+
+		//Each testimonial
+		.testimonial {
+			//Testimonial 1
+			&-1 {
+				grid-column: 1 / span 2;
+			}
+
+			//Testimonial 3
+			&-3 {
+				grid-column: 1;
+				grid-row: 2;
+			}
+
+			//Testimonial 4
+			&-4 {
+				grid-column: 2 / span 2;
+				grid-row: 2;
+			}
+
+			//Testimonial 5
+			&-5 {
+				grid-column: 4;
+				grid-row: 1 / span 2;
+			}
+
+			//Testimonial content
+			&__content {
+				&-title {
+					margin-bottom: 24px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+//Resets
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+//Variables
+
+//Colors
+$white: #fff;
+$darkBlue: #19202d;
+$lightBlue: #48556a;
+$violet: #733fc8;
+$lightViolet: #a775f1;
+$grey: #cfcfcf;
+$lightGrey: #ecf2f8;
+
+//Font
+$mainFont: "Barlow Semi Condensed", sans-serif;
+
+//Body
+body {
+	font-size: 13px;
+	line-height: 18px;
+	font-family: $mainFont;
+	font-weight: 500;
+	background-color: $lightGrey;
+}
+
+//Typography
+h1 {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 600;
+}
+
+//Mixins
+@mixin flex($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@media screen and (min-width: 1200px) {
+	body {
+		height: 100vh;
+		@include flex(center, center);
+	}
+}
